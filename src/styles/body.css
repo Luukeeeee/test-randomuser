@@ -1,0 +1,89 @@
+html {
+  font-size: 14px;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #2c3e50;
+  font-family: "Montserrat", sans-serif, Arial, "Microsoft Yahei";
+}
+
+.grid-box {
+  position: relative;
+  margin-top: 100px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+@media screen and (max-width: 1200px) {
+  .grid-box {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .grid-box {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .grid-box {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+.title {
+  text-align: center;
+  color: #e8f6fd;
+  font-size: xx-large;
+  font-weight: 400;
+}
+
+.filter {
+  float: right;
+  width: 180px;
+  height: 30px;
+  background-color: #0984e3;
+  margin-right: 3em;
+  border: 0.5px solid #7591ad;
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  justify-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  overflow: hidden;
+  color: #e8f6fd;
+}
+
+.filter span {
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  vertical-align: middle;
+  border-right: 0.5px solid #7591ad;
+  width: 60px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.filter span:hover {
+  background-color: #7591ad;
+}
+
+.filter .selected {
+  background-color: #7591ad;
+}
+/*# sourceMappingURL=body.css.map */

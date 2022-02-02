@@ -1,0 +1,81 @@
+@import "./variables.scss";
+
+// * {
+//     margin: 0;
+//     padding: 0;
+// }
+
+html {
+    font-size: 14px;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: $background-color;
+    font-family: "Montserrat", sans-serif, Arial, "Microsoft Yahei";
+}
+
+.grid-box {
+    position: relative;
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+@media screen and (max-width: 1200px) {
+    .grid-box {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .grid-box {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .grid-box {
+        grid-template-columns: 1fr;
+    }
+}
+
+.title {
+    text-align: center;
+    color: $font_color;
+    font-size: xx-large;
+    font-weight: 400;
+}
+
+.filter {
+    float: right;
+    width: 180px;
+    height: 30px;
+    background-color: $color3;
+    margin-right: 3em;
+    border: 0.5px solid $border-color;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    justify-content: space-around;
+    overflow: hidden;
+    color: $font_color;
+    span {
+        display: inline-block;
+        height: 30px;
+        line-height: 30px;
+        vertical-align: middle;
+        border-right: 0.5px solid $border-color;
+        width: 60px;
+        text-align: center;
+        cursor: pointer;
+    }
+    span:hover {
+        background-color: $border-color;
+    }
+    .selected {
+        background-color: $border-color;
+    }
+}
