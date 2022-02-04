@@ -22,19 +22,19 @@ body {
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: $lScreen) {
     .grid-box {
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: $mScreen) {
     .grid-box {
         grid-template-columns: 1fr 1fr;
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: $sScreen) {
     .grid-box {
         grid-template-columns: 1fr;
     }
@@ -71,9 +71,9 @@ body {
         width: 60px;
         text-align: center;
         cursor: pointer;
-    }
-    span:hover {
-        background-color: $border-color;
+        &:hover {
+            background-color: $border-color;
+        }
     }
     .selected {
         background-color: $border-color;
